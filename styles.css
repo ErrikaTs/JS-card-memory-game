@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: hidden; /* Αποτρέπει το scroll */
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,8 +19,8 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(136, 136, 136);
-    border: 10px solid rgb(66, 142, 185);
+    background-color: rgb(21, 136, 73);
+    border: 10px solid rgb(44, 44, 44);
 }
 
 .card {
