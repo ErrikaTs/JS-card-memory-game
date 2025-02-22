@@ -25,13 +25,13 @@ window.onload = function() {
 }
 
 function shuffleCards() {
-    cardSet = cardList.concat(cardList); // Δύο από κάθε κάρτα
+    cardSet = cardList.concat(cardList); // Two of each card
     console.log("Before shuffle:", cardSet);
 
     // Fisher-Yates Shuffle
     for (let i = cardSet.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1)); // Τυχαίος δείκτης μεταξύ 0 και i
-        [cardSet[i], cardSet[j]] = [cardSet[j], cardSet[i]]; // Swap με destructuring
+        let j = Math.floor(Math.random() * (i + 1)); // Random index between 0 and i
+        [cardSet[i], cardSet[j]] = [cardSet[j], cardSet[i]]; // Swap with destructuring
     }
 
     console.log("After shuffle:", cardSet);
@@ -43,7 +43,7 @@ function startGame() {
         let row = [];
         for (let c = 0; c < columns; c++) {
             let cardImg = cardSet.pop();
-            row.push(cardImg); //JS
+            row.push(cardImg); 
 
             let card = document.createElement("img");
             card.id = r.toString() + "-" + c.toString();
@@ -75,7 +75,7 @@ function selectCard() {
         if (!card1Selected) {
             card1Selected = this;
 
-            let coords = card1Selected.id.split("-"); //"0-1" -> ["0", "1"]
+            let coords = card1Selected.id.split("-"); 
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
@@ -84,7 +84,7 @@ function selectCard() {
         else if (!card2Selected && this != card1Selected) {
             card2Selected = this;
 
-            let coords = card2Selected.id.split("-"); //"0-1" -> ["0", "1"]
+            let coords = card2Selected.id.split("-"); 
             let r = parseInt(coords[0]);
             let c = parseInt(coords[1]);
 
