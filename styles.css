@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Αποτρέπει το scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/background.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#board {
+    height: auto;
+    width: 90vw;
+    max-width: 475px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(136, 136, 136);
+    border: 10px solid rgb(66, 142, 185);
+}
+
+.card {
+    height: auto;
+    width: calc(18% - 5px);
+    max-width: 90px;
+    margin: 2.5px;
+}
+
